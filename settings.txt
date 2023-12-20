@@ -1,0 +1,54 @@
+
+# KEYBINDS
+
+
+move_left : Key.left
+move_right : Key.right
+move_up : Key.up
+move_down : Key.down
+
+dash : z
+
+
+#COLORS
+
+
+screen_edge_color_bg : white
+screen_edge_color_fg : white
+screen_edge_symbol : " "
+
+background_color_bg : black
+background_color_fg : black
+background_symbol : " "
+
+player_color_bg : cyan
+player_color_fg : cyan
+player_symbol : " "
+
+attack_highlight_color_bg : yellow
+attack_highlight_color_fg : red
+attack_highlight_symbol : "!"
+attack_highlight_slope1_symbol : /
+attack_highlight_slope2_symbol : \
+attack_highlight_symbol_flashing : True
+attack_highlight_slope : True
+
+attack_color_bg : red
+attack_color_fg : red
+attack_symbol : " "
+attack_slope1_symbol : /
+attack_slope2_symbol : \
+attack_symbol_flashing : False
+attack_symbols_slope : True
+
+dash_color_bg : black
+dash_color_fg : white
+dash_symbol : "#"
+dash_diagonal1_symbol : /
+dash_diagonal2_symbol : \
+dash_horizontal_symbol : —
+dash_vertical_symbol : |
+dash_symbol_flashing : False
+directional_dash_symbols : True
+dash_fadeout : True
+
