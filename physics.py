@@ -3,6 +3,8 @@ handles most of the calculations in the game
 
 """
 
+WIDTH = 960
+HEIGHT = 290
 
 class BaseSprite():
 

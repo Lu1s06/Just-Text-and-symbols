@@ -1,19 +1,17 @@
 """game loop and display loop"""
 import random
 import time
-import itertools
 
 import pynput
 from pynput.keyboard import Key
 
 # import physics     # import physics.py as physics for calculating operations [currently not used]
 
-
 FPS = 60
 LOOP_DELTA = 1./FPS
 
-HEIGHT = 150
-WIDTH = 200
+WIDTH = 96
+HEIGHT = 29
 currently_pressed = []
 
 def on_press(key):
@@ -69,14 +67,10 @@ def main_game_loop():
     Returns:
     None
     """
-    current_time = target_time = time.perf_counter()
-    for i in itertools.count():
-        #### loop frequency evaluation
-        previous_time, current_time = current_time, time.perf_counter()
-        time_delta = current_time - previous_time
-        print(f'loop #{i} frequency: {1. / time_delta}') #tick display
-        #### processing
-        # processing example that sleeps a random time between 0 and LOOP_DELTA/2.
+    target_time = time.perf_counter()
+    while True:
+        #### loop frequency evaluation [fps limit]
+
         time.sleep(random.uniform(0, LOOP_DELTA / 2.))
 
         #### sleep management
