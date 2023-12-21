@@ -1,7 +1,15 @@
+"""
+handles most of the calculations in the game
+
+"""
+
+
 class BaseSprite():
 
-    """adds a base sprite class
-    can be referenced in other classes to help implement new sprites"""
+    """
+    adds a base sprite class
+    can be referenced in other classes to help implement new sprites
+    """
     def __init__(self, x, y, width, height):
         """currently does nothing"""
         self.x = x
@@ -10,12 +18,26 @@ class BaseSprite():
         self.height = height
 
     def move(self, dx, dy):
-        """moves the sprite by the specified amount"""
+        """
+        Move the object by the given amounts in the x and y directions.
+
+        Parameters:
+            dx (int): The amount to move in the x direction.
+            dy (int): The amount to move in the y direction.
+        """
+
         self.x += dx
         self.y += dy
 
     def resize(self, dw, dh):
-        """resizes the sprite by the specified amount"""
+        """
+        Resizes the object by adjusting its width and height.
+
+        Parameters:
+            dw (int): The amount to increase the width of the object by.
+            dh (int): The amount to increase the height of the object by.
+        """
+
         self.width += dw
         self.height += dh
         
