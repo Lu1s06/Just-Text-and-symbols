@@ -1,4 +1,4 @@
-"""game loop and display loop"""
+"""main game loop and display loop"""
 import random
 import time
 
