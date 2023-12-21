@@ -7,7 +7,7 @@ move_right : Key.right
 move_up : Key.up
 move_down : Key.down
 
-dash : z
+dash : 'z'
 
 
 #COLORS
@@ -28,27 +28,36 @@ player_symbol : " "
 attack_highlight_color_bg : yellow
 attack_highlight_color_fg : red
 attack_highlight_symbol : "!"
-attack_highlight_slope1_symbol : /
-attack_highlight_slope2_symbol : \
+attack_highlight_slope1_symbol : '/'
+attack_highlight_slope2_symbol : '\'
 attack_highlight_symbol_flashing : True
 attack_highlight_slope : True
 
 attack_color_bg : red
 attack_color_fg : red
 attack_symbol : " "
-attack_slope1_symbol : /
-attack_slope2_symbol : \
+attack_slope1_symbol : '/'
+attack_slope2_symbol : '\'
 attack_symbol_flashing : False
 attack_symbols_slope : True
 
 dash_color_bg : black
 dash_color_fg : white
 dash_symbol : "#"
-dash_diagonal1_symbol : /
-dash_diagonal2_symbol : \
-dash_horizontal_symbol : —
-dash_vertical_symbol : |
+dash_diagonal1_symbol : '/'
+dash_diagonal2_symbol : '\'
+dash_horizontal_symbol : '—'
+dash_vertical_symbol : '|'
 dash_symbol_flashing : False
 directional_dash_symbols : True
 dash_fadeout : True
 
+
+#LANGUAGE
+
+
+pause_screen_text : 'Game Paused'
+settings_button_text : "Settings"
+resume_text : 'Resume'
+back_text : '< BACK'
+exit_to_menu_text : 'Back to level selector'
