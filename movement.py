@@ -1,15 +1,15 @@
 #variable declaration
-ACCELERATIONX = 1.3 #Any value greater than 1
-ACCELERATIONY = 1.3 #Any value greater than 1
+ACCELERATIONX = 1.3 #Any value above 0
+ACCELERATIONY = 1.3 #Any value above 0
 
-FRICTIONX = 0.9 #Any value between 0 and 1
-FRICTIONY = 0.9 #Any value between 0 and 1
+FRICTIONX = -0.9 #Any value below 0
+FRICTIONY = -0.9 #Any value below 0
 
 MAX_XVEL = 5
 MAX_YVEL = 5
 
-THRESHHOLDX = 0.25 #Minimum veloctiy threshhold 
-THRESHHOLDY = 0.25 #Minimum veloctiy threshhold 
+THRESHHOLDX = 0.25 #Minimum veloctiy threshhold
+THRESHHOLDY = 0.25 #Minimum veloctiy threshhold
 
 def step(velX, velY): #returns the change of position on each frame
     return
@@ -24,10 +24,10 @@ def calcVel(velX, velY, inpX, inpY): #Returns the new velocity as a tuple each i
                                      
     
     if velX <= MAX_XVEL and inpX: #multiply vel with acceleration if moving into diretction
-        velX *= ACCELERATIONX * inpX
+        velX += ACCELERATIONX * inpX
         
     elif inpX == 0 or velX >= MAX_XVEL: #Friction calculation
-        velX *= FRICTIONX
+        velX += FRICTIONX
         
     if velX < THRESHHOLDX: #make player stop moving if velocity is under a certain freshhold
         velX = 0
@@ -37,10 +37,10 @@ def calcVel(velX, velY, inpX, inpY): #Returns the new velocity as a tuple each i
 
 
     if velY <= MAX_YVEL and inpY:
-        velY *= ACCELERATIONY * inpY
+        velY += ACCELERATIONY * inpY
         
     elif inpY == 0 or velY >= MAX_YVEL:
-        velY *= FRICTIONY
+        velY+= FRICTIONY
         
     if velY < THRESHHOLDY:
         velY = 0
